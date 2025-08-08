@@ -44,10 +44,10 @@ public class SecurityConfig {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        //.requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/staff/**").hasRole("STAFF")
                         .requestMatchers("/api/student/**").hasRole("STUDENT")
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/auth/**", "/api/admin/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

@@ -27,6 +27,8 @@ public class StudentService {
         return "student added successfully";
     }
 
+
+
     public String updateStudent(Student student){
         studentRepository.save(student);
         return "student updated successfully";
