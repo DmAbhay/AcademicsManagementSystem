@@ -13,11 +13,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin")
+@RequestMapping("/api/student")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('ADMIN')")
+@PreAuthorize("hasRole('ADMIN') or hasRole('STUDENT')")
 public class PersonalDetailController {
-
 
 
     private final PersonalDetailService personalDetailService;
@@ -26,6 +25,7 @@ public class PersonalDetailController {
     @PostMapping("/personal-details")
     public ResponseEntity<String> addPersonalDetails(@RequestBody PersonalDetailsDTO personalDetailsDTO) {
 
+        System.out.println(personalDetailsDTO);
         String message = personalDetailService.createPersonalDetails(personalDetailsDTO);
         return ResponseEntity.ok(message);
     }

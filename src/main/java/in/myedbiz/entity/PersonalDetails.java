@@ -18,8 +18,6 @@ public class PersonalDetails {
     @Id
     private String email;
 
-    private Long id;
-
     @Column(name = "relationship")
     @Enumerated(EnumType.STRING)
     private RelationShip relationship;

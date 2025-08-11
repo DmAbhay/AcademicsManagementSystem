@@ -64,7 +64,7 @@ public class PersonalDetailService {
 
             PersonalDetailsDTO personalDetailsDTO = new PersonalDetailsDTO();
 
-            personalDetailsDTO.setId(personalDetailsList.get(i).getId());
+
             personalDetailsDTO.setFirstName(personalDetailsList.get(i).getFirstName());
             personalDetailsDTO.setLastName(personalDetailsList.get(i).getLastName());
             personalDetailsDTO.setDob(personalDetailsList.get(i).getDob());
@@ -74,7 +74,7 @@ public class PersonalDetailService {
             personalDetailsDTO.setRelationship(personalDetailsList.get(i).getRelationship());
 
             personalDetailsDTO.setCountry(addressesList.get(i).getCountry());
-            personalDetailsDTO.setId(addressesList.get(i).getId());
+
             personalDetailsDTO.setCityCode(addressesList.get(i).getCityCode());
             personalDetailsDTO.setStreet(addressesList.get(i).getStreet());
             personalDetailsDTO.setEmail(addressesList.get(i).getEmail());
@@ -97,7 +97,7 @@ public class PersonalDetailService {
         if(personalDetailsOptional.isPresent() && addressOptional.isPresent()){
 
 
-            personalDetailsDTO.setId(personalDetailsOptional.get().getId());
+
             personalDetailsDTO.setFirstName(personalDetailsOptional.get().getFirstName());
             personalDetailsDTO.setLastName(personalDetailsOptional.get().getLastName());
             personalDetailsDTO.setDob(personalDetailsOptional.get().getDob());
@@ -107,7 +107,7 @@ public class PersonalDetailService {
             personalDetailsDTO.setRelationship(personalDetailsOptional.get().getRelationship());
 
             personalDetailsDTO.setCountry(addressOptional.get().getCountry());
-            personalDetailsDTO.setId(addressOptional.get().getId());
+
             personalDetailsDTO.setCityCode(addressOptional.get().getCityCode());
             personalDetailsDTO.setStreet(addressOptional.get().getStreet());
             personalDetailsDTO.setEmail(addressOptional.get().getEmail());
@@ -130,7 +130,7 @@ public class PersonalDetailService {
     private Address getAddress(PersonalDetailsDTO personalDetailsDTO) {
         Address address = new Address();
         address.setCountry(personalDetailsDTO.getCountry());
-        address.setId(personalDetailsDTO.getId());
+
         address.setCityCode(personalDetailsDTO.getCityCode());
         address.setStreet(personalDetailsDTO.getStreet());
         address.setEmail(personalDetailsDTO.getEmail());
@@ -141,7 +141,7 @@ public class PersonalDetailService {
 
     private PersonalDetails getPersonalDetails(PersonalDetailsDTO personalDetailsDTO) {
         PersonalDetails personalDetails = new PersonalDetails();
-        personalDetails.setId(personalDetailsDTO.getId());
+
         personalDetails.setFirstName(personalDetailsDTO.getFirstName());
         personalDetails.setLastName(personalDetailsDTO.getLastName());
         personalDetails.setDob(personalDetailsDTO.getDob());

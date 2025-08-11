@@ -12,8 +12,6 @@ import lombok.*;
 @Builder
 public class Address {
 
-    private Long id;
-
     @Id
     private String email;
 

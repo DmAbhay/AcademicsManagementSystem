@@ -16,5 +16,8 @@ public class Department {
     private String departmentCode;
 
     private String departmentName;
+
+    @Column(name = "NOfBatches")
+    private Integer numberOfBatch;
 }
 
